@@ -1,0 +1,5 @@
+for col in df.select_dtypes(exclude=["object", "datetime64[ns]"]).columns:
+    plt.figure(figsize=(3,3))
+    plt.title(col)
+    plt.boxplot(df[col])
+    plt.show()
